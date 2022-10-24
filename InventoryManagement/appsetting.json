@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "ADO": "server=DESKTOP-Q5ODVD3\\SQLEXPRESS;database=InventoryManagerment;user=sa;password=12345"
+  }
+}

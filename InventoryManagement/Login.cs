@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,16 +25,10 @@ namespace InventoryManagement
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            try
-            {
-                MySqlDataAdapter cd = new MySqlDataAdapter();
-            }
-            catch
-            {
-
-            }
+            ManageInventory m = new ManageInventory();
+            m.Show();
         }
     }
 }
