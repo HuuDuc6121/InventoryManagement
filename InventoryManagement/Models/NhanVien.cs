@@ -14,7 +14,7 @@ namespace InventoryManagement.Models
             PhieuXuatHangs = new HashSet<PhieuXuatHang>();
         }
 
-        public int Msnv { get; set; }
+        public int Msvn { get; set; }
         public string TaiKhoan { get; set; }
         public string MatKhau { get; set; }
         public string TenNv { get; set; }
