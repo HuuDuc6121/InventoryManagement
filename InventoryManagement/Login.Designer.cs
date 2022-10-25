@@ -35,12 +35,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,15 +74,15 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(9, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(418, 447);
+            this.panel1.Size = new System.Drawing.Size(418, 531);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(19, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(384, 318);
+            this.pictureBox1.Size = new System.Drawing.Size(384, 413);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -93,8 +92,8 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(4, 387);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(19, 472);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(296, 54);
             this.label2.TabIndex = 0;
@@ -106,26 +105,18 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(158, 333);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(173, 419);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(217, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "Inventory";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(433, 277);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 38);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // textBox2
             // 
+            this.textBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(433, 234);
+            this.textBox2.Location = new System.Drawing.Point(433, 235);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(300, 27);
             this.textBox2.TabIndex = 8;
@@ -133,7 +124,7 @@
             // textBox1
             // 
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(433, 166);
+            this.textBox1.Location = new System.Drawing.Point(433, 165);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(300, 27);
             this.textBox1.TabIndex = 9;
@@ -152,7 +143,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.Location = new System.Drawing.Point(433, 339);
+            this.linkLabel1.Location = new System.Drawing.Point(433, 338);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(82, 28);
             this.linkLabel1.TabIndex = 6;
@@ -160,23 +151,24 @@
             this.linkLabel1.Text = "Register";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // linkLabel2
+            // button1
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(646, 341);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(76, 20);
-            this.linkLabel2.TabIndex = 11;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "linkLabel2";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.button1.BackColor = System.Drawing.Color.SeaGreen;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(433, 281);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 41);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Login";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 449);
-            this.Controls.Add(this.linkLabel2);
+            this.ClientSize = new System.Drawing.Size(855, 547);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -203,11 +195,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

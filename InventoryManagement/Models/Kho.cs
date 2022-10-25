@@ -18,10 +18,10 @@ namespace InventoryManagement.Models
         public string SdtKho { get; set; }
         public int MsDiaDiem { get; set; }
         public int Msnv { get; set; }
-        public int MsLoaiHang { get; set; }
+        public int MsHang { get; set; }
 
         public virtual DiaDiem MsDiaDiemNavigation { get; set; }
-        public virtual LoaiHang MsLoaiHangNavigation { get; set; }
+        public virtual LoaiHang MsHangNavigation { get; set; }
         public virtual ICollection<PhieuNhapHang> PhieuNhapHangs { get; set; }
         public virtual ICollection<PhieuXuatHang> PhieuXuatHangs { get; set; }
     }
