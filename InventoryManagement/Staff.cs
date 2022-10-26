@@ -1,4 +1,5 @@
-﻿using InventoryManagement.Models;
+﻿
+using InventoryManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,18 @@ namespace InventoryManagement
             InitializeComponent();
         }
 
+        private bool CheckNull()
+        {
+            if (textBox1.Text == "" || textBox6.Text == "" || textBox5.Text == "" || textBox4.Text == "" || textBox3.Text == "")
+            {
+                MessageBox.Show("All Input is not Null, please try again", "Notification", MessageBoxButtons.OK);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         private bool CheckNull1()
         {
@@ -50,14 +63,20 @@ namespace InventoryManagement
                 dataGridView2.Rows.Add(item.Msvn, item.TaiKhoan, item.MatKhau, item.TenNv, item.Tuoi, item.Sdt);
                 dataGridView3.Rows.Add(item.Msvn, item.TaiKhoan, item.MatKhau, item.TenNv, item.Tuoi, item.Sdt);
             }
+
+
         }
         private void Staff_Load(object sender, EventArgs e)
         {
-
+            LoadData();
         }
 
         private void add_btn_Click(object sender, EventArgs e)
         {
+            if (!CheckNull())
+            {
+                return;
+            }
             add_btn.Enabled = false;
             NhanVien dt = new NhanVien();
             var id = textBox2.Text;
@@ -66,6 +85,7 @@ namespace InventoryManagement
             dt.TenNv = textBox5.Text;
             dt.Tuoi = textBox4.Text;
             dt.Sdt = textBox3.Text;
+            dt.RoleId = 1;
             var db = new InventoryManagementContext();
             var checkid = db.NhanViens.Where(x => x.Msvn.Equals(id)).FirstOrDefault();
             db.NhanViens.Add(dt);
@@ -123,6 +143,7 @@ namespace InventoryManagement
             int id = int.Parse(textBox14.Text);
             var db = new InventoryManagementContext();
             var obj = db.NhanViens.Where(x => x.Msvn == id).FirstOrDefault();
+            var checkrole = db.NhanViens.Where(x => x.RoleId == 0).FirstOrDefault();
             if (obj != null)
             {
                 DialogResult dialogResult = MessageBox.Show("Ban co chac muon xoa don", "Xoa don", MessageBoxButtons.YesNo);

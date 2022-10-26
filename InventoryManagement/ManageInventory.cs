@@ -1,5 +1,6 @@
 ﻿
 using InventoryManagement.Models;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,25 @@ namespace InventoryManagement
         public ManageInventory()
         {
             InitializeComponent();
+            //_Admin = admin;
+            //_User = nhanvien;
+            //if (admin.RoleId == 0 || nhanvien.RoleId == 1)
+            //{
+
+            //    var db = new InventoryManagementContext();
+            //    var list1 = db.DiaDiems.Select(p => new { Text = p.MsDiaDiem, Value = p.DiaChi }).ToList();
+            //    comboBox1.ValueMember = "Text";
+            //    comboBox1.DisplayMember = "Value";
+            //    comboBox1.DataSource = (list1.ToArray());
+            //    var list2 = db.LoaiHangs.Select(p => new { Text = p.MsLoaiHang, Value = p.TenLoaiHang }).ToList();
+            //    comboBox2.ValueMember = "Text";
+            //    comboBox2.DisplayMember = "Value";
+            //    comboBox2.DataSource = (list2.ToArray());
+            //    button3.Enabled = false;
+            //    button5.Enabled = false;
+
+            //}
+
         }
 
         public void LoadData()
@@ -25,11 +45,11 @@ namespace InventoryManagement
             dataGridView2.Rows.Clear();
             dataGridView3.Rows.Clear();
             List<Kho> list = new List<Kho>();
-            using(InventoryManagermentContext context = new InventoryManagermentContext())
+            using (InventoryManagementContext context = new InventoryManagementContext())
             {
                 list = context.Khos.ToList();
             }
-            foreach(Kho item in list)
+            foreach (Kho item in list)
             {
                 dataGridView1.Rows.Add(item.MsKho, item.TenKho, item.SdtKho, item.MsDiaDiem, item.Msnv, item.MsLoaiHang);
                 dataGridView2.Rows.Add(item.MsKho, item.TenKho, item.SdtKho, item.MsDiaDiem, item.Msnv, item.MsLoaiHang);
@@ -47,7 +67,7 @@ namespace InventoryManagement
             textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["Column1"].Value.ToString();
             textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString();
             textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells["Column3"].Value.ToString();
-            var db = new InventoryManagermentContext();
+            var db = new InventoryManagementContext();
             var list1 = db.DiaDiems.Select(p => new { Text = p.MsDiaDiem, Value = p.DiaChi }).ToList();
             comboBox1.ValueMember = "Text";
             comboBox1.DisplayMember = "Value";
@@ -64,10 +84,10 @@ namespace InventoryManagement
             Kho k = new Kho();
             k.TenKho = textBox2.Text;
             k.SdtKho = textBox3.Text;
-            k.MsDiaDiem = int.Parse(comboBox1.SelectedValue.ToString());
+            k.MsDiaDiem = int.Parse(comboBox1.Text);
             k.Msnv = int.Parse(numericUpDown1.Value.ToString());
-            k.MsLoaiHang = int.Parse(comboBox2.SelectedValue.ToString());
-            using (var context = new InventoryManagermentContext())
+            k.MsLoaiHang = int.Parse(comboBox2.Text);
+            using (var context = new InventoryManagementContext())
             {
                 context.Khos.Add(k);
                 context.SaveChanges();
@@ -95,7 +115,7 @@ namespace InventoryManagement
             textBox6.Text = dataGridView1.Rows[e.RowIndex].Cells["Column1"].Value.ToString();
             textBox5.Text = dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString();
             textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells["Column3"].Value.ToString();
-            var db = new InventoryManagermentContext();
+            var db = new InventoryManagementContext();
             var list1 = db.DiaDiems.Select(p => new { Text = p.MsDiaDiem, Value = p.DiaChi }).ToList();
             comboBox4.ValueMember = "Text";
             comboBox4.DisplayMember = "Value";
@@ -110,7 +130,7 @@ namespace InventoryManagement
         private void button3_Click(object sender, EventArgs e)
         {
             int id = int.Parse(textBox6.Text);
-            using (var context = new InventoryManagermentContext())
+            using (var context = new InventoryManagementContext())
             {
                 Kho k = context.Khos.Where(x => x.MsKho == id).FirstOrDefault();
                 k.TenKho = textBox5.Text;
@@ -135,7 +155,7 @@ namespace InventoryManagement
         private void button5_Click(object sender, EventArgs e)
         {
             int id = int.Parse(textBox9.Text);
-            using (var context = new InventoryManagermentContext())
+            using (var context = new InventoryManagementContext())
             {
                 Kho k = context.Khos.Where(x => x.MsKho == id).FirstOrDefault();
                 if (k == null)
@@ -173,7 +193,7 @@ namespace InventoryManagement
             textBox9.Text = dataGridView1.Rows[e.RowIndex].Cells["Column1"].Value.ToString();
             textBox8.Text = dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString();
             textBox7.Text = dataGridView1.Rows[e.RowIndex].Cells["Column3"].Value.ToString();
-            var db = new InventoryManagermentContext();
+            var db = new InventoryManagementContext();
             var list1 = db.DiaDiems.Select(p => new { Text = p.MsDiaDiem, Value = p.DiaChi }).ToList();
             comboBox6.ValueMember = "Text";
             comboBox6.DisplayMember = "Value";
@@ -185,6 +205,20 @@ namespace InventoryManagement
             comboBox5.DataSource = (list2.ToArray());
         }
 
-
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            string text = textBox10.Text;
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            dataGridView3.Rows.Clear();
+            var db = new InventoryManagementContext();
+            List<Kho> list = db.Khos.Where(x => x.TenKho.Contains(text)).ToList();
+            foreach (Kho item in list)
+            {
+                dataGridView1.Rows.Add(item.MsKho, item.TenKho, item.SdtKho, item.MsDiaDiem, item.Msnv, item.MsLoaiHang);
+                dataGridView2.Rows.Add(item.MsKho, item.TenKho, item.SdtKho, item.MsDiaDiem, item.Msnv, item.MsLoaiHang);
+                dataGridView3.Rows.Add(item.MsKho, item.TenKho, item.SdtKho, item.MsDiaDiem, item.Msnv, item.MsLoaiHang);
+            }
+        }
     }
 }

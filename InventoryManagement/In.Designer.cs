@@ -84,17 +84,16 @@
             this.Slide_panel = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.xem = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.add_btn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.sl_nhap = new System.Windows.Forms.TextBox();
-            this.ms_mat_hang = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.msnv = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.ms_kho = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -107,17 +106,16 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.update_btn = new System.Windows.Forms.Button();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -130,17 +128,16 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.xem_5 = new System.Windows.Forms.Button();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.delete_btn = new System.Windows.Forms.Button();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -160,6 +157,12 @@
             this.Don = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.panel8.SuspendLayout();
@@ -175,6 +178,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -743,17 +748,16 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.xem);
+            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.add_btn);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.sl_nhap);
-            this.panel1.Controls.Add(this.ms_mat_hang);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.msnv);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.ms_kho);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -761,22 +765,33 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(214, 181);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1181, 592);
+            this.panel1.Size = new System.Drawing.Size(1373, 592);
             this.panel1.TabIndex = 41;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // xem
+            // comboBox3
             // 
-            this.xem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.xem.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.xem.Image = global::InventoryManagement.Properties.Resources.icons8_invisible_50__1_;
-            this.xem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.xem.Location = new System.Drawing.Point(53, 447);
-            this.xem.Name = "xem";
-            this.xem.Size = new System.Drawing.Size(265, 67);
-            this.xem.TabIndex = 68;
-            this.xem.Text = "Xem Don";
-            this.xem.UseVisualStyleBackColor = false;
-            this.xem.Click += new System.EventHandler(this.xem_Click_1);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(120, 254);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(213, 28);
+            this.comboBox3.TabIndex = 82;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(100, 208);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(233, 28);
+            this.comboBox2.TabIndex = 82;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(100, 160);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(233, 28);
+            this.comboBox1.TabIndex = 69;
             // 
             // add_btn
             // 
@@ -798,7 +813,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(139, 72);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 22);
+            this.textBox1.Size = new System.Drawing.Size(194, 22);
             this.textBox1.TabIndex = 66;
             // 
             // label2
@@ -813,9 +828,9 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(104, 109);
+            this.dateTimePicker1.Location = new System.Drawing.Point(89, 109);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(249, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(243, 27);
             this.dateTimePicker1.TabIndex = 64;
             // 
             // sl_nhap
@@ -825,14 +840,6 @@
             this.sl_nhap.Name = "sl_nhap";
             this.sl_nhap.Size = new System.Drawing.Size(223, 22);
             this.sl_nhap.TabIndex = 60;
-            // 
-            // ms_mat_hang
-            // 
-            this.ms_mat_hang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ms_mat_hang.Location = new System.Drawing.Point(123, 257);
-            this.ms_mat_hang.Name = "ms_mat_hang";
-            this.ms_mat_hang.Size = new System.Drawing.Size(210, 22);
-            this.ms_mat_hang.TabIndex = 61;
             // 
             // label7
             // 
@@ -844,14 +851,6 @@
             this.label7.TabIndex = 55;
             this.label7.Text = "So Luong";
             // 
-            // msnv
-            // 
-            this.msnv.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.msnv.Location = new System.Drawing.Point(95, 209);
-            this.msnv.Name = "msnv";
-            this.msnv.Size = new System.Drawing.Size(238, 22);
-            this.msnv.TabIndex = 62;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -861,14 +860,6 @@
             this.label6.Size = new System.Drawing.Size(108, 20);
             this.label6.TabIndex = 56;
             this.label6.Text = "MS Mat Hang";
-            // 
-            // ms_kho
-            // 
-            this.ms_kho.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ms_kho.Location = new System.Drawing.Point(95, 161);
-            this.ms_kho.Name = "ms_kho";
-            this.ms_kho.Size = new System.Drawing.Size(238, 22);
-            this.ms_kho.TabIndex = 63;
             // 
             // label5
             // 
@@ -915,7 +906,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(813, 531);
+            this.dataGridView1.Size = new System.Drawing.Size(892, 531);
             this.dataGridView1.TabIndex = 54;
             // 
             // Column1
@@ -972,17 +963,16 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.comboBox4);
+            this.panel3.Controls.Add(this.comboBox5);
             this.panel3.Controls.Add(this.update_btn);
+            this.panel3.Controls.Add(this.comboBox6);
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.dateTimePicker2);
             this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox4);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.textBox5);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.textBox6);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label14);
@@ -990,22 +980,24 @@
             this.panel3.Controls.Add(this.label15);
             this.panel3.Location = new System.Drawing.Point(214, 187);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1177, 587);
+            this.panel3.Size = new System.Drawing.Size(1369, 587);
             this.panel3.TabIndex = 69;
             // 
-            // button1
+            // comboBox4
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Image = global::InventoryManagement.Properties.Resources.icons8_invisible_50__1_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(35, 460);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(264, 72);
-            this.button1.TabIndex = 82;
-            this.button1.Text = "Xem Don";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(119, 249);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(213, 28);
+            this.comboBox4.TabIndex = 85;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(99, 203);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(233, 28);
+            this.comboBox5.TabIndex = 84;
             // 
             // update_btn
             // 
@@ -1020,6 +1012,14 @@
             this.update_btn.Text = "Sua Don";
             this.update_btn.UseVisualStyleBackColor = false;
             this.update_btn.Click += new System.EventHandler(this.update_btn_Click_1);
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(99, 155);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(233, 28);
+            this.comboBox6.TabIndex = 83;
             // 
             // textBox2
             // 
@@ -1055,14 +1055,6 @@
             this.textBox3.Size = new System.Drawing.Size(223, 22);
             this.textBox3.TabIndex = 74;
             // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(121, 253);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(210, 22);
-            this.textBox4.TabIndex = 75;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -1073,14 +1065,6 @@
             this.label10.TabIndex = 69;
             this.label10.Text = "So Luong";
             // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(93, 205);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(238, 22);
-            this.textBox5.TabIndex = 76;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1090,14 +1074,6 @@
             this.label11.Size = new System.Drawing.Size(108, 20);
             this.label11.TabIndex = 70;
             this.label11.Text = "MS Mat Hang";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.Location = new System.Drawing.Point(93, 157);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(238, 22);
-            this.textBox6.TabIndex = 77;
             // 
             // label12
             // 
@@ -1202,17 +1178,16 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.xem_5);
+            this.panel5.Controls.Add(this.comboBox7);
+            this.panel5.Controls.Add(this.comboBox8);
             this.panel5.Controls.Add(this.delete_btn);
+            this.panel5.Controls.Add(this.comboBox9);
             this.panel5.Controls.Add(this.textBox7);
             this.panel5.Controls.Add(this.label16);
             this.panel5.Controls.Add(this.dateTimePicker3);
             this.panel5.Controls.Add(this.textBox8);
-            this.panel5.Controls.Add(this.textBox9);
             this.panel5.Controls.Add(this.label17);
-            this.panel5.Controls.Add(this.textBox10);
             this.panel5.Controls.Add(this.label18);
-            this.panel5.Controls.Add(this.textBox11);
             this.panel5.Controls.Add(this.label19);
             this.panel5.Controls.Add(this.label20);
             this.panel5.Controls.Add(this.label21);
@@ -1220,22 +1195,24 @@
             this.panel5.Controls.Add(this.label22);
             this.panel5.Location = new System.Drawing.Point(217, 177);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1173, 599);
+            this.panel5.Size = new System.Drawing.Size(1365, 599);
             this.panel5.TabIndex = 70;
             // 
-            // xem_5
+            // comboBox7
             // 
-            this.xem_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.xem_5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.xem_5.Image = global::InventoryManagement.Properties.Resources.icons8_invisible_50__1_;
-            this.xem_5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.xem_5.Location = new System.Drawing.Point(50, 433);
-            this.xem_5.Name = "xem_5";
-            this.xem_5.Size = new System.Drawing.Size(265, 69);
-            this.xem_5.TabIndex = 82;
-            this.xem_5.Text = "Xem Don";
-            this.xem_5.UseVisualStyleBackColor = false;
-            this.xem_5.Click += new System.EventHandler(this.xem_5_Click);
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(137, 233);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(213, 28);
+            this.comboBox7.TabIndex = 88;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(117, 187);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(233, 28);
+            this.comboBox8.TabIndex = 87;
             // 
             // delete_btn
             // 
@@ -1250,6 +1227,14 @@
             this.delete_btn.Text = "Xoa Don";
             this.delete_btn.UseVisualStyleBackColor = false;
             this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click_1);
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(117, 139);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(233, 28);
+            this.comboBox9.TabIndex = 86;
             // 
             // textBox7
             // 
@@ -1285,14 +1270,6 @@
             this.textBox8.Size = new System.Drawing.Size(223, 22);
             this.textBox8.TabIndex = 74;
             // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox9.Location = new System.Drawing.Point(139, 233);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(210, 22);
-            this.textBox9.TabIndex = 75;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -1303,14 +1280,6 @@
             this.label17.TabIndex = 69;
             this.label17.Text = "So Luong";
             // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox10.Location = new System.Drawing.Point(111, 185);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(238, 22);
-            this.textBox10.TabIndex = 76;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -1320,14 +1289,6 @@
             this.label18.Size = new System.Drawing.Size(108, 20);
             this.label18.TabIndex = 70;
             this.label18.Text = "MS Mat Hang";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox11.Location = new System.Drawing.Point(111, 137);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(238, 22);
-            this.textBox11.TabIndex = 77;
             // 
             // label19
             // 
@@ -1519,11 +1480,82 @@
             this.pictureBox4.TabIndex = 68;
             this.pictureBox4.TabStop = false;
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(92)))));
+            this.panel9.Controls.Add(this.button1);
+            this.panel9.Controls.Add(this.label27);
+            this.panel9.Controls.Add(this.button3);
+            this.panel9.Controls.Add(this.label28);
+            this.panel9.Controls.Add(this.pictureBox2);
+            this.panel9.Location = new System.Drawing.Point(1400, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(187, 140);
+            this.panel9.TabIndex = 110;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(21, 83);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(143, 18);
+            this.label27.TabIndex = 71;
+            this.label27.Text = "Quan Li Mat Hang";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button3.Location = new System.Drawing.Point(21, 205);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(215, 41);
+            this.button3.TabIndex = 70;
+            this.button3.Text = "Don Hang";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(92)))));
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.Location = new System.Drawing.Point(53, 173);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(156, 18);
+            this.label28.TabIndex = 69;
+            this.label28.Text = "Kiem Tra Don Hang";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(92)))));
+            this.pictureBox2.Image = global::InventoryManagement.Properties.Resources._200_2006680_the_twin_oaks_warehouse_management_system_inventory_menegment;
+            this.pictureBox2.Location = new System.Drawing.Point(32, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(129, 77);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 68;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button1.Location = new System.Drawing.Point(33, 104);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 29);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Mat Hang";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1393, 801);
+            this.ClientSize = new System.Drawing.Size(1697, 801);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label24);
@@ -1558,6 +1590,9 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1628,11 +1663,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox sl_nhap;
-        private System.Windows.Forms.TextBox ms_mat_hang;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox msnv;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox ms_kho;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -1644,18 +1676,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button xem;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button update_btn;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
@@ -1667,18 +1695,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button delete_btn;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
@@ -1690,7 +1714,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button xem_5;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button button2;
@@ -1699,5 +1722,20 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

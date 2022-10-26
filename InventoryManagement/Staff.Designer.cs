@@ -40,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,7 +62,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.Xem = new System.Windows.Forms.Button();
             this.Update_btn = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,7 +84,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.watch = new System.Windows.Forms.Button();
             this.Delete_btn = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -257,7 +254,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.add_btn);
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.textBox1);
@@ -277,20 +273,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1161, 521);
             this.panel3.TabIndex = 10;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Image = global::InventoryManagement.Properties.Resources.icons8_invisible_50__1_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(20, 416);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(258, 51);
-            this.button2.TabIndex = 66;
-            this.button2.Text = "Xem NV";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // add_btn
             // 
@@ -462,9 +444,9 @@
             this.label13.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.Location = new System.Drawing.Point(11, 148);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 21);
+            this.label13.Size = new System.Drawing.Size(96, 21);
             this.label13.TabIndex = 55;
-            this.label13.Text = "Mat KHau";
+            this.label13.Text = "Mat Khau";
             // 
             // label14
             // 
@@ -488,7 +470,6 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.Xem);
             this.panel5.Controls.Add(this.Update_btn);
             this.panel5.Controls.Add(this.dataGridView2);
             this.panel5.Controls.Add(this.textBox7);
@@ -508,20 +489,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1161, 521);
             this.panel5.TabIndex = 67;
-            // 
-            // Xem
-            // 
-            this.Xem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Xem.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Xem.Image = global::InventoryManagement.Properties.Resources.icons8_invisible_50__1_;
-            this.Xem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Xem.Location = new System.Drawing.Point(37, 422);
-            this.Xem.Name = "Xem";
-            this.Xem.Size = new System.Drawing.Size(258, 54);
-            this.Xem.TabIndex = 80;
-            this.Xem.Text = "Xem NV";
-            this.Xem.UseVisualStyleBackColor = false;
-            this.Xem.Click += new System.EventHandler(this.Xem_Click);
             // 
             // Update_btn
             // 
@@ -693,9 +660,9 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(11, 148);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 21);
+            this.label6.Size = new System.Drawing.Size(96, 21);
             this.label6.TabIndex = 69;
-            this.label6.Text = "Mat KHau";
+            this.label6.Text = "Mat Khau";
             // 
             // label7
             // 
@@ -719,7 +686,6 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.watch);
             this.panel6.Controls.Add(this.Delete_btn);
             this.panel6.Controls.Add(this.dataGridView3);
             this.panel6.Controls.Add(this.textBox13);
@@ -739,20 +705,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1161, 521);
             this.panel6.TabIndex = 67;
-            // 
-            // watch
-            // 
-            this.watch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.watch.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.watch.Image = global::InventoryManagement.Properties.Resources.icons8_invisible_50__1_;
-            this.watch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.watch.Location = new System.Drawing.Point(49, 422);
-            this.watch.Name = "watch";
-            this.watch.Size = new System.Drawing.Size(246, 57);
-            this.watch.TabIndex = 94;
-            this.watch.Text = "Xem NV";
-            this.watch.UseVisualStyleBackColor = false;
-            this.watch.Click += new System.EventHandler(this.watch_Click);
             // 
             // Delete_btn
             // 
@@ -924,15 +876,15 @@
             this.label21.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label21.Location = new System.Drawing.Point(11, 148);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(97, 21);
+            this.label21.Size = new System.Drawing.Size(96, 21);
             this.label21.TabIndex = 83;
-            this.label21.Text = "Mat KHau";
+            this.label21.Text = "Mat Khau";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label22.Location = new System.Drawing.Point(14, 96);
+            this.label22.Location = new System.Drawing.Point(14, 98);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(95, 21);
             this.label22.TabIndex = 84;
@@ -987,9 +939,9 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel3);
             this.Name = "Staff";
             this.Text = "Staff";
             this.Load += new System.EventHandler(this.Staff_Load);
@@ -1049,7 +1001,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -1072,7 +1023,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button Update_btn;
-        private System.Windows.Forms.Button Xem;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
@@ -1095,7 +1045,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button Delete_btn;
-        private System.Windows.Forms.Button watch;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label25;

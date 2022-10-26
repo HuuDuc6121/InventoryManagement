@@ -20,7 +20,9 @@ namespace InventoryManagement.Models
         public string TenNv { get; set; }
         public string Tuoi { get; set; }
         public string Sdt { get; set; }
+        public int? RoleId { get; set; }
 
+        public virtual VaiTro Role { get; set; }
         public virtual ICollection<DiaDiem> DiaDiems { get; set; }
         public virtual ICollection<PhieuNhapHang> PhieuNhapHangs { get; set; }
         public virtual ICollection<PhieuXuatHang> PhieuXuatHangs { get; set; }
