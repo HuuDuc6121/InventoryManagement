@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Dropbox (Old (1))\\PC\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj": {}
+    "C:\\Users\\Admin\\OneDrive\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Dropbox (Old (1))\\PC\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj": {
+    "C:\\Users\\Admin\\OneDrive\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Dropbox (Old (1))\\PC\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
         "projectName": "InventoryManagement",
-        "projectPath": "C:\\Users\\Admin\\Dropbox (Old (1))\\PC\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Dropbox (Old (1))\\PC\\Desktop\\InventoryManagement\\InventoryManagement\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\InventoryManagement\\InventoryManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -83,8 +83,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -96,7 +95,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -50,7 +50,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             this.panel3 = new System.Windows.Forms.Panel();
             this.update_mh_btn = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -244,6 +243,7 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(462, 410);
             this.dataGridView1.TabIndex = 100;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -328,13 +328,6 @@
             this.label22.Size = new System.Drawing.Size(95, 22);
             this.label22.TabIndex = 89;
             this.label22.Text = "Mat Hang";
-            // 
-            // sqlCommand1
-            // 
-            this.sqlCommand1.CommandTimeout = 30;
-            this.sqlCommand1.Connection = null;
-            this.sqlCommand1.Notification = null;
-            this.sqlCommand1.Transaction = null;
             // 
             // panel3
             // 
@@ -626,9 +619,9 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel3);
             this.Name = "Item";
             this.Text = "Item";
             this.Load += new System.EventHandler(this.Item_Load);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oQuubQFc2/PMJ4eJrLTc42nBtJhxACN/04QXaZ88U1uSloFOI/X273v+7bY2J62mF2WSI1uFs8YP848ur214hg==",
+  "dgSpecHash": "vC+sm0HIrl9OW7iK1w4ehmfPfSRfMNPE7nFrFz3GBuqo89ePByCqB9fPeat0TnIKJ5PpH94JrF0A7MP/9y6rig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Dropbox (Old (1))\\PC\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

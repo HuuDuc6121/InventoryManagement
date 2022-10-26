@@ -158,11 +158,11 @@
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
@@ -909,6 +909,7 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(866, 531);
             this.dataGridView1.TabIndex = 68;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -1498,6 +1499,18 @@
             this.panel9.Size = new System.Drawing.Size(187, 140);
             this.panel9.TabIndex = 109;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button2.Location = new System.Drawing.Point(36, 108);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(129, 25);
+            this.button2.TabIndex = 72;
+            this.button2.Text = "Mat Hang";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -1542,18 +1555,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 68;
             this.pictureBox2.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button2.Location = new System.Drawing.Point(36, 108);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 25);
-            this.button2.TabIndex = 72;
-            this.button2.Text = "Mat Hang";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Out
             // 

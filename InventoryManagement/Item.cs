@@ -81,7 +81,7 @@ namespace InventoryManagement
             add_mh_btn.Enabled = false;
             MatHang dt = new MatHang();
             var id = textBox1.Text;
-            dt.MsLoaiHang = int.Parse(comboBox1.Text);
+            dt.MsLoaiHang = int.Parse(comboBox1.SelectedValue.ToString());
             dt.TenHang = textBox2.Text;
             var db = new InventoryManagementContext();
             db.MatHangs.Add(dt);
@@ -202,6 +202,17 @@ namespace InventoryManagement
                 dataGridView2.Rows.Add(item.MsMatHang, item.MsLoaiHang, item.TenHang);
                 dataGridView3.Rows.Add(item.MsMatHang, item.MsLoaiHang, item.TenHang);
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["Column1"].Value.ToString();
+            var db = new InventoryManagementContext();
+            var list1 = db.LoaiHangs.Select(p => new { Text = p.MsLoaiHang, Value = p.TenLoaiHang }).ToList();
+            comboBox1.ValueMember = "Text";
+            comboBox1.DisplayMember = "Value";
+            comboBox1.DataSource = (list1.ToArray());
+            textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells["Column3"].Value.ToString();
         }
     }
 }

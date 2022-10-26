@@ -84,9 +84,9 @@ namespace InventoryManagement
             Kho k = new Kho();
             k.TenKho = textBox2.Text;
             k.SdtKho = textBox3.Text;
-            k.MsDiaDiem = int.Parse(comboBox1.Text);
+            k.MsDiaDiem = int.Parse(comboBox1.SelectedValue.ToString());
             k.Msnv = int.Parse(numericUpDown1.Value.ToString());
-            k.MsLoaiHang = int.Parse(comboBox2.Text);
+            k.MsLoaiHang = int.Parse(comboBox2.SelectedValue.ToString());
             using (var context = new InventoryManagementContext())
             {
                 context.Khos.Add(k);
@@ -220,5 +220,6 @@ namespace InventoryManagement
                 dataGridView3.Rows.Add(item.MsKho, item.TenKho, item.SdtKho, item.MsDiaDiem, item.Msnv, item.MsLoaiHang);
             }
         }
+
     }
 }

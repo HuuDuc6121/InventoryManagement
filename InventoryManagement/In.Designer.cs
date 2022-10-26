@@ -158,11 +158,11 @@
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.panel8.SuspendLayout();
@@ -242,11 +242,11 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
-            this.dataGridView5.Location = new System.Drawing.Point(352, 29);
+            this.dataGridView5.Location = new System.Drawing.Point(352, 21);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.RowTemplate.Height = 29;
-            this.dataGridView5.Size = new System.Drawing.Size(805, 533);
+            this.dataGridView5.Size = new System.Drawing.Size(88, 454);
             this.dataGridView5.TabIndex = 64;
             // 
             // dataGridViewTextBoxColumn13
@@ -908,6 +908,7 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(892, 531);
             this.dataGridView1.TabIndex = 54;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -1493,6 +1494,18 @@
             this.panel9.Size = new System.Drawing.Size(187, 140);
             this.panel9.TabIndex = 110;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button1.Location = new System.Drawing.Point(33, 104);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 29);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Mat Hang";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -1537,18 +1550,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 68;
             this.pictureBox2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button1.Location = new System.Drawing.Point(33, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 29);
-            this.button1.TabIndex = 72;
-            this.button1.Text = "Mat Hang";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Home
             // 
