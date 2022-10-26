@@ -8552,11 +8552,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Dropbox (Old (1))\\PC\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
       "projectName": "InventoryManagement",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+      "projectPath": "C:\\Users\\Admin\\Dropbox (Old (1))\\PC\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\InventoryManagement\\InventoryManagement\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Dropbox (Old (1))\\PC\\Desktop\\InventoryManagement\\InventoryManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

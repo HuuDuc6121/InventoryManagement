@@ -1,4 +1,5 @@
-﻿using InventoryManagement.Models;
+﻿
+using InventoryManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +18,21 @@ namespace InventoryManagement
         {
             InitializeComponent();
         }
-
+        private bool CheckNull()
+        {
+            if (comboBox1.Text == "" || comboBox2.Text == "" || comboBox3.Text == "" || sl_nhap.Text == "")
+            {
+                MessageBox.Show("All Input is not Null, please try again", "Notification", MessageBoxButtons.OK);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         private bool CheckNull1()
         {
-            if (textBox6.Text == "" || textBox5.Text == "" || textBox4.Text == "" || textBox3.Text == "")
+            if (comboBox6.Text == "" || comboBox5.Text == "" || comboBox4.Text == "" || textBox3.Text == "")
             {
                 MessageBox.Show("All Input is not Null, please try again", "Notification", MessageBoxButtons.OK);
                 return false;
@@ -52,13 +64,17 @@ namespace InventoryManagement
         }
         private void add_btn_Click(object sender, EventArgs e)
         {
+            if (!CheckNull())
+            {
+                return;
+            }
             add_btn.Enabled = false;
             PhieuXuatHang dt = new PhieuXuatHang();
             var id = textBox1.Text;
             dt.NgayLapPhieuXuat = dateTimePicker1.Value;
-            dt.MsKho = int.Parse(ms_kho.Text);
-            dt.Msnv = int.Parse(msnv.Text);
-            dt.MsMatHang = int.Parse(ms_mat_hang.Text);
+            dt.MsKho = int.Parse(comboBox1.Text);
+            dt.Msnv = int.Parse(comboBox2.Text);
+            dt.MsMatHang = int.Parse(comboBox3.Text);
             dt.SlXuat = int.Parse(sl_nhap.Text);
             var db = new InventoryManagementContext();
             db.PhieuXuatHangs.Add(dt);
@@ -77,9 +93,19 @@ namespace InventoryManagement
         {
             textBox2.Text = dataGridView2.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value.ToString();
             dateTimePicker2.Text = dataGridView2.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn2"].Value.ToString();
-            textBox6.Text = dataGridView2.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn3"].Value.ToString();
-            textBox5.Text = dataGridView2.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
-            textBox4.Text = dataGridView2.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn5"].Value.ToString();
+            var db = new InventoryManagementContext();
+            var list1 = db.Khos.Select(p => new { Text = p.MsKho, Value = p.TenKho }).ToList();
+            comboBox6.ValueMember = "Text";
+            comboBox6.DisplayMember = "Value";
+            comboBox6.DataSource = (list1.ToArray());
+            var list2 = db.NhanViens.Select(p => new { Text = p.Msvn, Value = p.TenNv }).ToList();
+            comboBox5.ValueMember = "Text";
+            comboBox5.DisplayMember = "Value";
+            comboBox5.DataSource = (list1.ToArray());
+            var list3 = db.MatHangs.Select(p => new { Text = p.MsMatHang, Value = p.TenHang }).ToList();
+            comboBox4.ValueMember = "Text";
+            comboBox4.DisplayMember = "Value";
+            comboBox4.DataSource = (list1.ToArray());
             textBox3.Text = dataGridView2.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn6"].Value.ToString();
         }
 
@@ -94,9 +120,9 @@ namespace InventoryManagement
             var db = new InventoryManagementContext();
             var obj = db.PhieuXuatHangs.Where(x => x.MsPhieuXuat == id).FirstOrDefault();
             obj.NgayLapPhieuXuat = dateTimePicker2.Value;
-            obj.MsKho = int.Parse(textBox6.Text);
-            obj.Msnv = int.Parse(textBox5.Text);
-            obj.MsMatHang = int.Parse(textBox4.Text);
+            obj.MsKho = int.Parse(comboBox6.SelectedValue.ToString());
+            obj.Msnv = int.Parse(comboBox5.SelectedValue.ToString());
+            obj.MsMatHang = int.Parse(comboBox4.SelectedValue.ToString());
             obj.SlXuat = int.Parse(textBox3.Text);
             db.PhieuXuatHangs.Update(obj);
             db.SaveChanges();
@@ -135,35 +161,45 @@ namespace InventoryManagement
         {
             textBox7.Text = dataGridView3.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn7"].Value.ToString();
             dateTimePicker3.Text = dataGridView3.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn8"].Value.ToString();
-            textBox11.Text = dataGridView3.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn9"].Value.ToString();
-            textBox10.Text = dataGridView3.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn10"].Value.ToString();
-            textBox9.Text = dataGridView3.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn11"].Value.ToString();
+            var db = new InventoryManagementContext();
+            var list1 = db.Khos.Select(p => new { Text = p.MsKho, Value = p.TenKho }).ToList();
+            comboBox9.ValueMember = "Text";
+            comboBox9.DisplayMember = "Value";
+            comboBox9.DataSource = (list1.ToArray());
+            var list2 = db.NhanViens.Select(p => new { Text = p.Msvn, Value = p.TenNv }).ToList();
+            comboBox8.ValueMember = "Text";
+            comboBox8.DisplayMember = "Value";
+            comboBox8.DataSource = (list1.ToArray());
+            var list3 = db.MatHangs.Select(p => new { Text = p.MsMatHang, Value = p.TenHang }).ToList();
+            comboBox7.ValueMember = "Text";
+            comboBox7.DisplayMember = "Value";
+            comboBox7.DataSource = (list1.ToArray());
             textBox8.Text = dataGridView3.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn12"].Value.ToString();
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
         {
-                delete_btn.Enabled = false;
-                int id = int.Parse(textBox7.Text);
-                var db = new InventoryManagementContext();
-                var obj = db.PhieuXuatHangs.Where(x => x.MsPhieuXuat == id).FirstOrDefault();
-                if (obj != null)
+            delete_btn.Enabled = false;
+            int id = int.Parse(textBox7.Text);
+            var db = new InventoryManagementContext();
+            var obj = db.PhieuXuatHangs.Where(x => x.MsPhieuXuat == id).FirstOrDefault();
+            if (obj != null)
+            {
+                DialogResult dialogResult = MessageBox.Show("Ban co chac muon xoa don", "Xoa don", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Ban co chac muon xoa don", "Xoa don", MessageBoxButtons.YesNo);
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        db.PhieuXuatHangs.Remove(obj);
-                        MessageBox.Show("Xoa don thanh cong :" + id);
-                        db.SaveChanges();
-                        LoadData();
-                    }
-                    else if (dialogResult == DialogResult.No)
-                    {
-                        // ko lam gi
-                    }
+                    db.PhieuXuatHangs.Remove(obj);
+                    MessageBox.Show("Xoa don thanh cong :" + id);
+                    db.SaveChanges();
+                    LoadData();
                 }
+                else if (dialogResult == DialogResult.No)
+                {
+                    // ko lam gi
+                }
+            }
 
-                delete_btn.Enabled = true;
+            delete_btn.Enabled = true;
         }
 
         private void watch_Click(object sender, EventArgs e)
@@ -192,6 +228,17 @@ namespace InventoryManagement
             Home home = new Home();
             home.Show();
             this.Hide();
+        }
+
+        private void Out_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            item.Show();
         }
     }
 }

@@ -104,6 +104,12 @@ namespace InventoryManagement
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -114,22 +120,28 @@ namespace InventoryManagement
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Location = new System.Drawing.Point(-1, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(186, 633);
+            this.panel3.Size = new System.Drawing.Size(186, 796);
             this.panel3.TabIndex = 1;
             // 
             // button6
             // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = global::InventoryManagement.Properties.Resources.icons8_delete_24;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(34, 332);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(152, 90);
@@ -140,6 +152,10 @@ namespace InventoryManagement
             // 
             // button4
             // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::InventoryManagement.Properties.Resources.Edit_Property_24px;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(36, 210);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 84);
@@ -150,7 +166,7 @@ namespace InventoryManagement
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.BackColor = System.Drawing.Color.SeaGreen;
             this.panel4.Location = new System.Drawing.Point(3, 78);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(34, 89);
@@ -158,6 +174,10 @@ namespace InventoryManagement
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::InventoryManagement.Properties.Resources.Data_RecoverySFDSA_25px;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(36, 78);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 89);
@@ -168,6 +188,7 @@ namespace InventoryManagement
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -180,7 +201,7 @@ namespace InventoryManagement
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(854, 377);
+            this.dataGridView1.Size = new System.Drawing.Size(854, 427);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -348,12 +369,16 @@ namespace InventoryManagement
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(88, 413);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Image = global::InventoryManagement.Properties.Resources.data_add_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(28, 413);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 64);
+            this.button1.Size = new System.Drawing.Size(235, 64);
             this.button1.TabIndex = 16;
             this.button1.Text = "Tao";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // numericUpDown1
@@ -382,9 +407,9 @@ namespace InventoryManagement
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(188, 79);
+            this.panel1.Location = new System.Drawing.Point(191, 192);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1167, 555);
+            this.panel1.Size = new System.Drawing.Size(1167, 640);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -405,19 +430,23 @@ namespace InventoryManagement
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Location = new System.Drawing.Point(188, 79);
+            this.panel2.Location = new System.Drawing.Point(194, 189);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1167, 555);
+            this.panel2.Size = new System.Drawing.Size(1167, 640);
             this.panel2.TabIndex = 2;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(88, 413);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Image = global::InventoryManagement.Properties.Resources.Text_Edit_icon;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(29, 413);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 64);
+            this.button3.Size = new System.Drawing.Size(241, 64);
             this.button3.TabIndex = 51;
             this.button3.Text = "Sua";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // numericUpDown2
@@ -541,6 +570,7 @@ namespace InventoryManagement
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -553,7 +583,7 @@ namespace InventoryManagement
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(854, 377);
+            this.dataGridView2.Size = new System.Drawing.Size(854, 430);
             this.dataGridView2.TabIndex = 36;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
@@ -617,19 +647,23 @@ namespace InventoryManagement
             this.panel5.Controls.Add(this.label24);
             this.panel5.Controls.Add(this.label25);
             this.panel5.Controls.Add(this.dataGridView3);
-            this.panel5.Location = new System.Drawing.Point(188, 79);
+            this.panel5.Location = new System.Drawing.Point(190, 195);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1167, 555);
+            this.panel5.Size = new System.Drawing.Size(1167, 640);
             this.panel5.TabIndex = 3;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(88, 413);
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.Image = global::InventoryManagement.Properties.Resources.icons8_cancel_filled_24__2_;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(29, 413);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 64);
+            this.button5.Size = new System.Drawing.Size(255, 64);
             this.button5.TabIndex = 67;
             this.button5.Text = "Xoa";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // numericUpDown3
@@ -753,6 +787,7 @@ namespace InventoryManagement
             // 
             // dataGridView3
             // 
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
@@ -811,11 +846,76 @@ namespace InventoryManagement
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.Width = 125;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel6.Controls.Add(this.label26);
+            this.panel6.Controls.Add(this.pictureBox1);
+            this.panel6.Location = new System.Drawing.Point(302, 1);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(158, 167);
+            this.panel6.TabIndex = 18;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.SeaGreen;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(22, 130);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(120, 27);
+            this.label26.TabIndex = 6;
+            this.label26.Text = "Hi Admin,";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.SeaGreen;
+            this.pictureBox1.Image = global::InventoryManagement.Properties.Resources.Users_Administrator_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(108, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(1113, 159);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(187, 27);
+            this.textBox10.TabIndex = 53;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label27.Location = new System.Drawing.Point(1011, 162);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(86, 21);
+            this.label27.TabIndex = 52;
+            this.label27.Text = "Tim Kiem";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Lucida Handwriting", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label28.Location = new System.Drawing.Point(478, 9);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(364, 61);
+            this.label28.TabIndex = 54;
+            this.label28.Text = "Quan Li Kho";
+            // 
             // ManageInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1357, 636);
+            this.ClientSize = new System.Drawing.Size(1399, 807);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
@@ -836,7 +936,11 @@ namespace InventoryManagement
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -916,5 +1020,11 @@ namespace InventoryManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
     }
 }

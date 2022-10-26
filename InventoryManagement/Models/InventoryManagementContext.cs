@@ -25,11 +25,13 @@ namespace InventoryManagement.Models
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<PhieuNhapHang> PhieuNhapHangs { get; set; }
         public virtual DbSet<PhieuXuatHang> PhieuXuatHangs { get; set; }
+        public virtual DbSet<VaiTro> VaiTros { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
+
                 var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
                 optionsBuilder.UseSqlServer(config.GetConnectionString("ADO"));
             }
@@ -70,7 +72,7 @@ namespace InventoryManagement.Models
 
                 entity.Property(e => e.MsDiaDiem).HasColumnName("ms_dia_diem");
 
-                entity.Property(e => e.MsHang).HasColumnName("ms_hang");
+                entity.Property(e => e.MsLoaiHang).HasColumnName("ms_loai_hang");
 
                 entity.Property(e => e.Msnv).HasColumnName("msnv");
 
@@ -89,9 +91,9 @@ namespace InventoryManagement.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("Kho tai");
 
-                entity.HasOne(d => d.MsHangNavigation)
+                entity.HasOne(d => d.MsLoaiHangNavigation)
                     .WithMany(p => p.Khos)
-                    .HasForeignKey(d => d.MsHang)
+                    .HasForeignKey(d => d.MsLoaiHang)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("Kho Chua");
             });
@@ -144,6 +146,8 @@ namespace InventoryManagement.Models
                     .IsUnicode(false)
                     .HasColumnName("mat_khau");
 
+                entity.Property(e => e.RoleId).HasColumnName("role_id");
+
                 entity.Property(e => e.Sdt)
                     .HasMaxLength(10)
                     .IsUnicode(false)
@@ -162,6 +166,11 @@ namespace InventoryManagement.Models
                     .HasMaxLength(10)
                     .IsUnicode(false)
                     .HasColumnName("tuoi");
+
+                entity.HasOne(d => d.Role)
+                    .WithMany(p => p.NhanViens)
+                    .HasForeignKey(d => d.RoleId)
+                    .HasConstraintName("FK_Nhan Vien_Vai Tro");
             });
 
             modelBuilder.Entity<PhieuNhapHang>(entity =>
@@ -240,6 +249,20 @@ namespace InventoryManagement.Models
                     .HasForeignKey(d => d.Msnv)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("NV Xuat hang");
+            });
+
+            modelBuilder.Entity<VaiTro>(entity =>
+            {
+                entity.HasKey(e => e.RoleId);
+
+                entity.ToTable("Vai Tro");
+
+                entity.Property(e => e.RoleId).HasColumnName("role_id");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("name");
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -29,16 +29,23 @@ namespace InventoryManagement
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
+
             var _username = textBox1.Text;
             var _password = textBox2.Text;
             button1.Enabled = false;
             var db = new InventoryManagementContext();
-            var _check = db.NhanViens.Where(x => x.TaiKhoan.Equals(_username) && x.MatKhau.Equals(_password)).FirstOrDefault();
+            var _check = db.NhanViens.Where(x => x.TaiKhoan.Equals(_username) && x.MatKhau.Equals(_password) && x.RoleId == 0).FirstOrDefault();
+            var _checknv = db.NhanViens.Where(x => x.TaiKhoan.Equals(_username) && x.MatKhau.Equals(_password) && x.RoleId == 1).FirstOrDefault();
             if (_check != null)
             {
                 Admin admin = new Admin();
                 admin.Show();
+                this.Hide();
+            }
+            else if (_checknv != null)
+            {
+                Home home = new Home();
+                home.Show();
                 this.Hide();
             }
             else
@@ -46,6 +53,7 @@ namespace InventoryManagement
                 MessageBox.Show("You are not allow to access this function", "Login Failed", MessageBoxButtons.OK);
                 button1.Enabled = true;
             }
+
         }
     }
 }

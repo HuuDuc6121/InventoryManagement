@@ -50,6 +50,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -61,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -68,7 +72,7 @@
             this.panel2.BackColor = System.Drawing.Color.SeaGreen;
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(212, 0);
+            this.panel2.Location = new System.Drawing.Point(350, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(158, 167);
             this.panel2.TabIndex = 7;
@@ -103,9 +107,9 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(102, 178);
+            this.panel1.Location = new System.Drawing.Point(272, 173);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1306, 450);
+            this.panel1.Size = new System.Drawing.Size(1359, 450);
             this.panel1.TabIndex = 8;
             // 
             // panel6
@@ -310,17 +314,50 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(397, 9);
+            this.label1.Location = new System.Drawing.Point(535, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 55);
+            this.label1.Size = new System.Drawing.Size(563, 55);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Quan Li Kho";
+            this.label1.Text = "He Thong Quan Li Kho";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panel7.Controls.Add(this.button2);
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(266, 796);
+            this.panel7.TabIndex = 10;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel8.Location = new System.Drawing.Point(3, 78);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(34, 89);
+            this.panel8.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::InventoryManagement.Properties.Resources.home_4_24__1_;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(43, 78);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(223, 89);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Bang dieu khien";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1410, 640);
+            this.ClientSize = new System.Drawing.Size(1581, 837);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -343,6 +380,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,5 +410,8 @@
         private System.Windows.Forms.Button mathang;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel8;
     }
 }
